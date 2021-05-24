@@ -8,8 +8,8 @@
 
 - name: Copiando o arquivo de deploy da app para o host
   template:
-    src: app-v1.yml.j2 {{ file_src_app_v1 }}
-    dest: /opt/giropops/app-v1.yml {{ file_dest_app_v1 }}
+    src: app-v1.yml.j2 {{ file_src_deploy_app_v1 }}
+    dest: /opt/giropops/app-v1.yml {{ file_dest_deploy_app_v1 }}
     owner: root
     group: root
     mode: 0644
@@ -18,7 +18,7 @@
 - name: Copiando o arquivo de service da app para o host
   copy: src={{ item.src }} dest={{ item.dest }}
   with_items:
-    - {src: 'service_app.yml', dest: '/opt/giropops/service_app.yml' }
+    - {src: 'service_app_v1.yml', dest: '/opt/giropops/service_app_v1.yml' } {{ file_src_service_app_01 }} {{ file_dest_service_app_01 }}
   register: copiando_serbice_file
 
 - name: Executando o deploy da app Giropops
@@ -26,6 +26,6 @@
   register: deploy_app
 
 - name: Criando o Service da App Giropops
-  shell: kubectl apply -f /opt/giropops/service_app.yml
+  shell: kubectl apply -f /opt/giropops/service_app_v1.yml {{ file_dest_service_app_v1 }}
   register: deploy_svc_app
 
