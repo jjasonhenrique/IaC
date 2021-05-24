@@ -5,3 +5,7 @@ version: 1.0.0
 prometheus_scrape: "true"
 prometheus_port: 32111
 nginx_port: 80
+file_src_deploy_app_v1: 'app-v1.yml.j2'
+file_dest_deploy_app_v1: '/opt/giropops/app-v1.yml'
+file_src_service_app_v1: 'service_app_v1.yml'
+file_dest_service_app_v1: '/opt/giropops/service_app_v1.yml'
