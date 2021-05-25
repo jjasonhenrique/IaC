@@ -26,10 +26,10 @@ sudo ./aws/install
 
 ## Fases do Projeto
 ```
-- Provisioning => Criar as instâncias para o nosso cluster
-- Installl_K8s => Criação do Cluster, etc.
-- Deploy_App_v1 => Deploy de uma aplicação exemplo versão 1
-- Deploy_App_v2 => Deploy de uma aplicação exemplo versão 2
+- Provisioning => Criar as instâncias para o nosso cluster na AWS.
+- Installl_K8s => Instalação  componentes Kubernetes, Criação do Cluster, Join Workers no Cluster.
+- Deploy_App_v1 => Deploy de uma aplicação exemplo versão 1 no cluster Kubernetes.
+- Deploy_App_v2 => Deploy de uma aplicação exemplo versão 2 no cluster KUbernetes.
 ```
 
 
