@@ -19,13 +19,13 @@
   copy: src={{ item.src }} dest={{ item.dest }}
   with_items:
     - {src: "{{ file_src_service_app_v1 }}", dest: "{{ file_dest_service_app_v1 }}" }
-  register: copiando_serbice_file
+  register: copiando_service_file
 
 - name: Executando o deploy da app Giropops
   shell: kubectl apply -f "{{ file_dest_deploy_app_v1 }}"
-  register: deploy_app
+  register: deploy_app_v1
 
 - name: Criando o Service da App Giropops
   shell: kubectl apply -f "{{ file_dest_service_app_v1 }}"
-  register: deploy_svc_app
+  register: deploy_svc_app_v1
 
