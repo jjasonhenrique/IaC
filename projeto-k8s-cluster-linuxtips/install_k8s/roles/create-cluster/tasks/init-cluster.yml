@@ -15,8 +15,8 @@
 
 - name: Linkando o arquivo admin.conf para o ~/.kube/config
   file:
-    src: /etc/kubernetes/admin.conf
-    dest: ~/.kube/config
+    src: /etc/kubernetes/admin.conf "{{ file_src_kubeconfig }}"
+    dest: ~/.kube/config "{{ file_dest_kubeconfig }}"
     state: link
 
 - name: Configurando o pod network Weavenet
