@@ -30,7 +30,6 @@ sudo ./aws/install
 - Installl_K8s => Criação do Cluster, etc.
 - Deploy_App_v1 => Deploy de uma aplicação exemplo versão 1
 - Deploy_App_v2 => Deploy de uma aplicação exemplo versão 2
-- Extras => Segredo
 ```
 
 
