@@ -17,9 +17,9 @@ sudo ./aws/install
 ```
 ## Configuração usuário IAM na máquina que irá administrar o Ansible
 ```
-Ir em um terminal Linux
-aws configure
-Será solicitado o AWS Access Key ID e AWS Secret Access Key
+- Ir em um terminal Linux
+- Digitar aws configure
+- Será solicitado o AWS Access Key ID e AWS Secret Access Key que foram criadas na etapa de Criação de usuário IAM na AWS
 
 - Mais informações => https://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-configure-quickstart.html
 ```
