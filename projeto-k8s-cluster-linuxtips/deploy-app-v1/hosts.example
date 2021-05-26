@@ -1,0 +1,11 @@
+[k8s-master]
+IP Publico Ansible-Kubernetes-01 - Adicionado Manualmente
+
+[k8s-workers]
+IP Publico Ansible-Kubernetes-02 - Adicionado Manualmente
+IP Publico Ansible-Kubernetes-03 - Adicionado Manualmente
+
+[k8s-workers:vars]
+K8S_MASTER_NODE_IP= IP Privado Ansible-Kubernetes-01 - Adicionado Manualmente
+K8S_API_SECURE_PORT=6443
+
