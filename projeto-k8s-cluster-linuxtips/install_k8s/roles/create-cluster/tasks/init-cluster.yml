@@ -15,8 +15,8 @@
 
 - name: Linkando o arquivo admin.conf para o ~/.kube/config
   file:
-    src: /etc/kubernetes/admin.conf "{{ file_src_kubeconfig }}"
-    dest: ~/.kube/config "{{ file_dest_kubeconfig }}"
+    src: "{{ file_src_kubeconfig }}"
+    dest: "{{ file_dest_kubeconfig }}"
     state: link
 
 - name: Configurando o pod network Weavenet
@@ -24,11 +24,11 @@
   register: weavenet_result
 
 - name: Pegando o token para adiciona os workers no cluster
-  shell: kubeadm token list | cut -d ' ' -f1 | sed -n '2p'
+  shell: "{{ kubeadm_token }}"
   register: k8s_token
 
 - name: CA Hash
-  shell: openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex |sed 's/^.* //'
+  shell: "{{ command_ca_hash }}"
   register: k8s_master_ca_hash
 
 - name: Adicionando o token e o Hash em um dummy host
