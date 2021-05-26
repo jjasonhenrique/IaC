@@ -1,3 +1,7 @@
 ---
 # vars file for create-cluster
 default_url_weavenet: "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+file_src_kubeconfig: '/etc/kubernetes/admin.conf'
+file_dest_kubeconfig: '~/.kube/config'
+kubeadm_token: kubeadm token list | cut -d ' ' -f1 | sed -n '2p'
+command_ca_hash: openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex |sed 's/^.* //'
