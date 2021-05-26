@@ -1,7 +1,7 @@
 ## IaC
 
 ```
-- Esse repositório tem o intuito de compartilhar meus playbooks do Ansible e meus arquivos Terraform com a comunidade.
+- Esse repositório tem o intuito de compartilhar minhas automações com a comunidade.
 ```
 
 ## Abaixo segue um descritivo de cada projeto:
