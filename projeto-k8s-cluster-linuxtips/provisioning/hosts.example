@@ -1,0 +1,16 @@
+[local]
+localhost ansible_connection=local ansible_python_interpreter=python gather_facts=false
+
+[kubernetes]
+IP Private Ansible-Kubernetes-01 - Adicionado Automaticamente
+IP Private Ansible-Kubernetes-02 - Adicionado Automaticamente
+IP Private Ansible-Kubernetes-03 - Adicionado Automaticamente
+
+IP Publico Ansible-Kubernetes-01 - Adicionado Automaticamente
+IP Publico Ansible-Kubernetes-02 - Adicionado Automaticamente
+IP Publico Ansible-Kubernetes-03 - Adicionado Automaticamente
+
+
+
+
+
